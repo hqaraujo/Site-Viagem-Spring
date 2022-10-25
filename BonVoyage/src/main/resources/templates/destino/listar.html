@@ -9,20 +9,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-	<title>Listagem de Clientes</title>
+	<title>Listagem de Destino</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/cliente">Clientes</a>
+			<a class="navbar-brand" href="/destino">Destino</a>
 		</div>
 	</nav>
 
 	<main class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Listagem de Clientes</h1>
+				<h1>Listagem de Destino</h1>
 			</div>
 		</div>
 
@@ -32,31 +32,30 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Nome</th>
-							<th scope="col">Foto</th>
-							<th scope="col">Data de Nascimento</th>
-							<th scope="col">Profissão</th>
+							<th scope="col">Pais</th>
+							<th scope="col">cidade</th>
+
 							<th scope="col">Ações</th>
+
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="cliente : ${clientes}">
-							<th scope="row" th:text="${cliente.id}"></th>
+						<tr th:each="destino : ${destino}">
+							<th scope="row" th:text="${destino.id_destino}"></th>
 							<td>
-								<a th:text="${cliente.nome}" th:href="@{/cliente/{id} (id=${cliente.id})}"></a>
+								<a th:text="${destino.id_destino}"
+									th:href="@{/destino/{id_destino} (id_destino=${destino.id_destino})}"></a>
 							</td>
-							<td>
-								<img alt="Image" class="img_prod" height="50px" width="70px"
-									th:src="|/cliente/imagem/${cliente.id}|" />
 
-							</td>
-							<td th:text="${cliente.dataNascimento}"></td>
-							<td th:text="${cliente.profissao}"></td>
+							<td th:text="${destino.pais}"></td>
+							<td th:text="${destino.cidade}"></td>
 							<td>
-								<a th:href="@{/cliente/{id}/editar (id=${cliente.id})}" class="btn btn-warning">
+								<a th:href="@{/destino/{id_destino}/editar (id_destino=${destino.id_destino})}"
+									class="btn btn-warning">
 									Editar
 								</a>
-								<a th:href="@{/cliente/{id}/excluir (id=${cliente.id})}" class="btn btn-danger"
+								<a th:href="@{/destino/{id_destino}/excluir (id_destino=${destino.id_destino})}"
+									class="btn btn-danger"
 									onclick="return confirm('Tem certeza que deseja excluir o cliente?');">
 									Excluir
 								</a>
@@ -69,7 +68,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<a th:href="@{/cliente/cadastrar}" class="btn btn-primary">Cadastrar novo Cliente</a>
+				<a th:href="@{/destino/cadastrar}" class="btn btn-primary">Cadastrar novo Destino</a>
 			</div>
 		</div>
 	</main>

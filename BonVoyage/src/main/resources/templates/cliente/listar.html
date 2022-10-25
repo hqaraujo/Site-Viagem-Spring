@@ -15,7 +15,7 @@
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/cliente">Clientes</a>
+			<a class="navbar-brand" href="/clientes">Clientes</a>
 		</div>
 	</nav>
 
@@ -32,31 +32,32 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Nome</th>
-							<th scope="col">Foto</th>
-							<th scope="col">Data de Nascimento</th>
-							<th scope="col">Profissão</th>
+							<th scope="col">CPF </th>
+							<th scope="col">Nome </th>
+							<th scope="col">Email </th>
+
 							<th scope="col">Ações</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="cliente : ${clientes}">
-							<th scope="row" th:text="${cliente.id}"></th>
+						<tr th:each="clientes : ${clientes}">
+							<th scope="row" th:text="${clientes.id_cliente}"></th>
 							<td>
-								<a th:text="${cliente.nome}" th:href="@{/cliente/{id} (id=${cliente.id})}"></a>
+								<a th:text="${clientes.id_cliente}"
+									th:href="@{/clientes/{id_cliente} (id_cliente=${clientes.id_cliente})}"></a>
 							</td>
-							<td>
-								<img alt="Image" class="img_prod" height="50px" width="70px"
-									th:src="|/cliente/imagem/${cliente.id}|" />
 
-							</td>
-							<td th:text="${cliente.dataNascimento}"></td>
-							<td th:text="${cliente.profissao}"></td>
+							<td th:text="${clientes.cpf_cliente}"></td>
+							<td th:text="${clientes.nome_cliente}"></td>
+							<td th:text="${clientes.email_cliente}"></td>
+
 							<td>
-								<a th:href="@{/cliente/{id}/editar (id=${cliente.id})}" class="btn btn-warning">
+								<a th:href="@{/clientes/{id_cliente}/editar (id_cliente=${clientes.id_cliente})}"
+									class="btn btn-warning">
 									Editar
 								</a>
-								<a th:href="@{/cliente/{id}/excluir (id=${cliente.id})}" class="btn btn-danger"
+								<a th:href="@{/clientes/{id_cliente}/excluir (id_cliente=${clientes.id_cliente})}"
+									class="btn btn-danger"
 									onclick="return confirm('Tem certeza que deseja excluir o cliente?');">
 									Excluir
 								</a>

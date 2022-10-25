@@ -15,7 +15,7 @@
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/login">Login</a>
+			<a class="navbar-brand" href="/loginn">Login</a>
 		</div>
 	</nav>
 
@@ -42,15 +42,15 @@
 							<th scope="row" th:text="${login.id_login}"></th>
 							<td>
 								<a th:text="${login.tipo_login}"
-									th:href="@{/login/{id_login} (id_login=${login.id_login})}"></a>
+									th:href="@{/loginn/{id_login} (id_login=${login.id_login})}"></a>
 							</td>
 
 
-							<a th:href="@{/login/{id_login}/editar (id_login=${login.id_login})}"
+							<a th:href="@{/loginn/{id_login}/editar (id_login=${login.id_login})}"
 								class="btn btn-warning">
 								Editar
 							</a>
-							<a th:href="@{/login/{id_login}/excluir (id_login=${login.id_login})}"
+							<a th:href="@{/loginn/{id_login}/excluir (id_login=${login.id_login})}"
 								class="btn btn-danger"
 								onclick="return confirm('Tem certeza que deseja excluir esse login?');">
 								Excluir

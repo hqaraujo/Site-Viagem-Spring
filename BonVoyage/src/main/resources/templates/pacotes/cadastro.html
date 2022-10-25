@@ -29,10 +29,6 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<form method="POST" th:object="${pacotes}" enctype="multipart/form-data">
-					<div class="mb-3">
-						<label for="id_pacote" class="form-label">Id Pacote</label>
-						<input type="number" class="form-control" id="id_pacote" th:field="*{id_pacote}">
-					</div>
 					
 					<div class="mb-3">
 						<label for="origem" class="form-label">Origem</label>
@@ -41,7 +37,7 @@
 					
 					<div class="mb-3">
 						<label for="promocao" class="form-label">Promocao</label>
-						<input type="number" class="form-control" id="id_promocao" th:field="*{promocao}">
+						<input type="number" class="form-control" id="promocao" th:field="*{promocao}">
 					</div>
 
 					

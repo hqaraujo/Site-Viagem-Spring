@@ -7,7 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-  <title>Detalhes do Cliente</title>
+  <title>Detalhes da Compra</title>
 
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
@@ -19,30 +19,36 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Clientes</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
   </nav>
 
   <main class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Detalhes do Cliente</h1>
+        <h1>Detalhes do Compras</h1>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
         <div class="card">
-          <h5 class="card-header" th:text="${cliente.nome}"></h5>
+          <h5 class="card-header" th:text="${compras.id_compras}"></h5>
           <div class="card-body">
             <p>
-              Profissão: <span th:text="${cliente.profissao}"></span>
+              Forma de Pagamento: <span th:text="${compras.forma_pagamento}"></span>
             </p>
             <p>
-              Data de Nascimento: <span th:text="${cliente.dataNascimento}"></span>
+              Data Compras: <span th:text="${compras.data_compras}"></span>
+            </p>
+             <p>
+              Valor: <span th:text="${compras.valor}"></span>
+            </p>
+             <p>
+              Valor Total: <span th:text="${compras.valor_total}"></span>
             </p>
 
-            <a href="/cliente" class="btn btn-warning">Voltar</a>
+            <a href="/compras" class="btn btn-warning">Voltar</a>
             
           </div>
         </div>

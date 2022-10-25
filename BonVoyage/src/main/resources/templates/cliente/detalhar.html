@@ -33,16 +33,17 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="card">
-          <h5 class="card-header" th:text="${cliente.nome}"></h5>
+          <h5 class="card-header" th:text="${clientes.cpf_cliente}"></h5>
           <div class="card-body">
             <p>
-              Profissão: <span th:text="${cliente.profissao}"></span>
+              nome Cliente: <span th:text="${clientes.nome_cliente}"></span>
             </p>
             <p>
-              Data de Nascimento: <span th:text="${cliente.dataNascimento}"></span>
+              Email do Cliente: <span th:text="${clientes.email_cliente}"></span>
             </p>
+             
 
-            <a href="/cliente" class="btn btn-warning">Voltar</a>
+            <a href="/clientes" class="btn btn-warning">Voltar</a>
             
           </div>
         </div>

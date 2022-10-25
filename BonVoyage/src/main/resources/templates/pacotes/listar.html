@@ -32,7 +32,7 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Id Pacote</th>
+
 							<th scope="col">Origem</th>
 							<th scope="col">Promocao</th>
 
@@ -47,14 +47,15 @@
 									th:href="@{/pacotes/{id_pacote} (id_pacote=${pacotes.id_pacote})}"></a>
 							</td>
 
+
 							<td th:text="${pacotes.origem}"></td>
 							<td th:text="${pacotes.promocao}"></td>
 							<td>
-								<a th:href="@{/pacotes/{id_pacote}/editar (id_pacote=${pacote.id_pacote})}"
+								<a th:href="@{/pacotes/{id_pacote}/editar (id_pacote=${pacotes.id_pacote})}"
 									class="btn btn-warning">
 									Editar
 								</a>
-								<a th:href="@{/pacotes/{id_pacote}/excluir (id_pacote=${pacote.id_pacote})}"
+								<a th:href="@{/pacotes/{id_pacote}/excluir (id_pacote=${pacotes.id_pacote})}"
 									class="btn btn-danger"
 									onclick="return confirm('Tem certeza que deseja excluir o pacote?');">
 									Excluir

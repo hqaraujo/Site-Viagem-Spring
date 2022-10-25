@@ -36,7 +36,7 @@ public class PacotesController {
 	}
 
 // Chama a view cadastrar e passa um objeto vazio
-	@GetMapping("/pacotes")
+	@GetMapping("/cadastrar")
 	public ModelAndView cadastrar() {
 		ModelAndView modelAndView = new ModelAndView("pacotes/cadastro");
 
